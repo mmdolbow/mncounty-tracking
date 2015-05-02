@@ -791,7 +791,7 @@
             "NAME":"Wilkin",
             "SC_FIPS":"27167",
             "COUN_FIPS":"167",
-            "MnGeo_Contact":"Jim",
+            "MnGeo_Contact":"Mike",
             "Status":"UNK"
          },
          "geometry":{
@@ -8893,7 +8893,7 @@
             "NAME":"Grant",
             "SC_FIPS":"27051",
             "COUN_FIPS":"051",
-            "MnGeo_Contact":"Jim",
+            "MnGeo_Contact":"Mike",
             "Status":"UNK"
          },
          "geometry":{
