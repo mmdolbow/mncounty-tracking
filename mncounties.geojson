@@ -5685,7 +5685,7 @@
             "NAME":"Meeker",
             "SC_FIPS":"27093",
             "COUN_FIPS":"093",
-            "MnGeo_Contact":"Jim",
+            "MnGeo_Contact":"Mike",
             "Status":"UNK"
          },
          "geometry":{
@@ -22597,7 +22597,7 @@
             "NAME":"Morrison",
             "SC_FIPS":"27097",
             "COUN_FIPS":"097",
-            "MnGeo_Contact":"Jim",
+            "MnGeo_Contact":"Mike",
             "Status":"UNK"
          },
          "geometry":{
