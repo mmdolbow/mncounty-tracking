@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MN Counties Tracking</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<style>
+	#map {
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	}
+	</style>
+	
+	<script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+	<script>
+	function initmap() {	
+		var map = L.map('map').setView([46.517296,-93.455200], 7);
+
+		var MapQuestOpen_OSM = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
+			attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+			subdomains: '1234'
+		});
+		map.addLayer(MapQuestOpen_OSM);
+
+
+		//switch to the rawgit CDN when in 'production'
+        $.getJSON("mncounties.geojson", function(response) {
+            //console.log("response", response);
+            var geojsonLayer = new L.GeoJSON(response, {
+                style: function(feature) {
+                    switch (feature.properties.MnGeo_Contact) {
+                        case 'Jim': return {color: "#00ff00"};
+                        case 'Mike':   return {color: "#0000ff"};
+                    }
+                }
+            });
+            geojsonLayer.addTo(map);    
+        });
+	}
+	</script>
+</head>
+<body onload="initmap()">
+	<div id="map"></div>
+
+</body>
+</html>
