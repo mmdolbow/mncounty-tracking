@@ -5685,7 +5685,7 @@
             "NAME":"Meeker",
             "SC_FIPS":"27093",
             "COUN_FIPS":"093",
-            "MnGeo_Contact":"Mike",
+            "MnGeo_Contact":"Jim",
             "Status":"UNK"
          },
          "geometry":{
@@ -11360,7 +11360,7 @@
             "NAME":"Kandiyohi",
             "SC_FIPS":"27067",
             "COUN_FIPS":"067",
-            "MnGeo_Contact":"Mike",
+            "MnGeo_Contact":"Jim",
             "Status":"UNK"
          },
          "geometry":{
