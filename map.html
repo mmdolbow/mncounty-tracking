@@ -28,8 +28,6 @@
 		});
 		map.addLayer(MapQuestOpen_OSM);
 
-
-		//switch to the rawgit CDN when in 'production'
         $.getJSON("mncounties.geojson", function(response) {
             //console.log("response", response);
             var geojsonLayer = new L.GeoJSON(response, {
