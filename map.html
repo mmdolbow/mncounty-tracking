@@ -38,10 +38,20 @@
                         case 'Jim': return {color: "#00ff00"};
                         case 'Mike':   return {color: "#0000ff"};
                     }
-                }
+                },
+                onEachFeature: onEachFeature
             });
             geojsonLayer.addTo(map);    
         });
+	}
+	
+	function onEachFeature(feature, layer) {
+	    if (feature.properties) {
+	    	var popuptxt = '<strong>'+feature.properties.NAME+'<\/strong><br>';
+	    	popuptxt += 'Contact: '+feature.properties.MnGeo_Contact+'<br>';
+	    	popuptxt += 'Status: '+feature.properties.Status;
+	        layer.bindPopup(popuptxt);
+	    }
 	}
 	</script>
 </head>
