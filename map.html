@@ -28,7 +28,7 @@
 		});
 		map.addLayer(MapQuestOpen_OSM);
 
-        $.getJSON("https://rawgit.com/mmdolbow/a740dd2aae7e5b07fc10/raw/", function(response) {
+        $.getJSON("https://rawgit.com/mmdolbow/a740dd2aae7e5b07fc10/raw/031c48d69153e3eb3887191fffe101a322aef764/map.geojson", function(response) {
             //console.log("response", response);
             var geojsonLayer = new L.GeoJSON(response, {
                 style: function(feature) {
