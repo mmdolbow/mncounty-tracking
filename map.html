@@ -28,7 +28,7 @@
 		});
 		map.addLayer(MapQuestOpen_OSM);
 
-        $.getJSON("mncounties.geojson", function(response) {
+        $.getJSON("https://gist.github.com/mmdolbow/a740dd2aae7e5b07fc10", function(response) {
             //console.log("response", response);
             var geojsonLayer = new L.GeoJSON(response, {
                 style: function(feature) {
